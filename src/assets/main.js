@@ -19,7 +19,7 @@ function setHiddenFields() {
 }
 
 function setMessage (parameter) {
-
+    message.innerHTML = parameter;
 }
 
 setHiddenFields();
