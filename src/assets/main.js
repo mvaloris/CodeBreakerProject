@@ -3,7 +3,7 @@ let attempt = document.getElementById('attempt');
 
 function guess() {
     let input = document.getElementById('user-guess');
-    if (answer = '' || attempt = '') {
+    if (answer === '' || attempt === '') {
         setHiddenFields();
     }
 }
@@ -12,10 +12,14 @@ function guess() {
 
 function setHiddenFields() {
     attempt = 0;
-    answer = Math.floor(Math.random()* 9999).toString();
+    answer.value = Math.floor(Math.random()* 9999).toString();
     while (answer.length < 4) {
         answer = '0' + answer;
     }
+}
+
+function setMessage (parameter) {
+
 }
 
 setHiddenFields();
