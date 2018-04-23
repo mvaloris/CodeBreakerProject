@@ -6,7 +6,7 @@ function guess() {
     if (answer === '' || attempt === '') {
         setHiddenFields();
     }
-    if (validateInput(input.value) === true) {
+    if (validateInput(input.value)) {
         attempt = attempt + 1;
     } else {
         return false;
@@ -14,7 +14,6 @@ function guess() {
 }
 
 //implement new functions here
-
 function setHiddenFields() {
     attempt = 0;
     answer.value = Math.floor(Math.random()* 10000).toString();
