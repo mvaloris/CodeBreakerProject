@@ -22,5 +22,11 @@ function setMessage (parameter) {
     message.innerHTML = parameter;
 }
 
-setHiddenFields();
-console.log(answer);
+function validateInput (parameter) {
+    if (parameter.length === 4) {
+        return true;
+    } else {
+        setMessage("Guesses must be exactly 4 characters long.");
+        return false;
+    }
+}
