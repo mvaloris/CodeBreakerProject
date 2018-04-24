@@ -6,10 +6,10 @@ function guess() {
     if (answer === '' || attempt === '') {
         setHiddenFields();
     }
-    if (validateInput(input.value)) {
-        attempt = attempt + 1;
-    } else {
+    if (validateInput(input.value) !== true) {
         return false;
+    } else {
+        attempt += 1;
     }
 }
 
